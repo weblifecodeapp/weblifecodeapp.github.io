@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <main class="desctop">
+    <form class="sum" >
+      <h1>Расчитать свой <b>код жизни</b></h1>
+      <h2>Введите данные</h2>
+      <div class="inputs">
+        <input type="text" placeholder="дд">
+        <input type="text" placeholder="мм">
+        <input type="text" placeholder="гггг">
+      </div>
+      <button class="button" type="button" onclick="show()">Рассчитать</button>
+      <script>
+        function show() {
+          document.querySelector('.sum').style.display = 'none';
+          document.querySelector('.result').style.display = 'flex';
+        }
+      </script>
+    </form>
+    <div class="result" style="display: none">
+      <h2>Ваша дата рождения<br><span>27.07.1986</span>г</h2>
+      <div class="container data">
+        <div class="figure">
+          <span class="point point-1 red-text ">1</span>
+          <span class="point point-2 ">2</span>
+          <span class="point point-3 point--right green-text ">3</span>
+          <span class="point point-4 red-text ">4</span>
+          <span class="point point-5 point--right ">5</span>
+          <span class="point point-6 ">6</span>
+          <span class="point point-7 point--right">7</span>
+          <span class="point point-8 ">8</span>
+          <span class="point point-9 ">1</span>
+          <span class="point point-10 point--right ">1</span>
+          <span class="point point-11 red-text ">1</span>
+          <span class="point point-12 ">1</span>
+          <span class="point-sum point-sum--1-2-4 blue-text">2</span>
+          <span class="point-sum point-sum--4-2-5 blue-text">6</span>
+          <span class="point-sum point-sum--2-3-5 blue-text">18</span>
+          <span class="point-sum point-sum--4-5-6 blue-text">20</span>
+          <span class="point-sum point-sum--9-11-10 blue-text">10</span>
+        </div>
+        <div class="information">
+          <p>Возраст души:<span class="information_value information_age-soul red-text">21</span></p>
+          <p>Мужские арканы:<span class="information_value information_male-arc red-text">2</span></p>
+          <p>Женские арканы:<span class="information_value information_female-arc red-text">1</span></p>
+          <p>Нейтральные арканы:<span class="information_value information_light-arc red-text">3</span></p>
+          <p>М/Ж энергии:<span class="information_value information_energy red-text">3/2</span></p>
+          <p>Кармические арканы:<span class="information_value information_carm-arc red-text">нет</span></p>
+        </div>
+      </div>
+      <div class="container buttons">
+        <button class="button button-anew">Рассчитать заново</button>
+        <a class="button" href="">Поделиться</a>
+      </div>
+      <p>Хотите знать больше?</p>
+      <a href="№" class="button button--red ">Расшифровка</a>
+    </div>
+  </main>
+</body>
+</html>

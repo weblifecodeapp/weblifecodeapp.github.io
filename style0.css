@@ -1,0 +1,218 @@
+html {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*, *::before, *::after { box-sizing: inherit;}
+
+body, h1, h2, p {margin: 0}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+h1 b {text-transform: uppercase;}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.red-text {color: red}
+.green-text {color: green}
+.blue-text {color: blue}
+
+.sum {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 10px 20px 30px;
+  border: 1px solid black;
+  width: 300px;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  width: 240px;
+  margin-bottom: 30px;
+}
+
+.inputs input {
+  width: 65px;
+  border: 2px solid #beb9cd;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px;
+}
+
+.button {
+  min-width: 195px;
+  border-radius: 10px;
+  background-color: #5900cc;
+  padding: 10px 20px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button--red {
+  min-width: auto;
+  margin-top: 15px;
+  background-color: red;
+}
+
+.button-anew {margin-right: 35px}
+
+.result {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+    margin: auto;
+}
+
+.container {display: flex;}
+
+.data {
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+
+.buttons {margin-bottom: 15px;}
+
+.figure {
+  position: relative;
+  counter-reset: point;    
+  background-image: url(bg.svg); 
+  width: 300px; 
+  height: 300px;
+  margin-right: 80px;
+  background-size: contain; 
+  background-repeat: no-repeat;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 24px;
+}
+
+.information_value {
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.point,
+.point-sum {
+  position: absolute;
+  line-height: 100%;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+.point {font-size: 32px;}
+.point-sum {font-size: 20px;}
+
+.point:before {
+  counter-increment: point;
+  content: "п." counter(point);
+  position: absolute;
+  bottom: 2px;
+  left: -125%;
+  font-size: 12px;
+  line-height: 100%;
+  color: #ada07e;
+}
+
+.point--two-numbers:before {left: -60%;}
+
+.point--right:before {
+  left: auto;
+  right: -125%;
+}
+
+.point--two-numbers.point--right:before {right: -65%;}
+
+.point-11 {top: 8%;}
+
+.point-9,
+.point-10 {top: 23%;}
+
+.point-1,
+.point-2,
+.point-3 {top: 47.5%;}
+
+.point-4,
+.point-5,
+.point-7,
+.point-12 {top: 67%;}
+
+.point-6 {top: 89%;}
+
+.point-8 {bottom: -15%;}
+
+
+.point-1 {left: 19%;}
+
+.point-2 {left: 50%;}
+
+.point-3 {right: 13%;}
+.point-3.point--two-numbers {right: 11%;}
+
+.point-4 {left: 36.5%;}
+.point-4.point--two-numbers {left: 35%;}
+
+.point-5 {right: 31.5%;}
+.point-5.point--two-numbers  {right: 25%;}
+
+.point-6 {left: 50%;}
+
+.point-7 {right: -1%;}
+.point-7.point--two-numbers {right: -8%;}
+
+.point-8 {left: 50%;}
+
+.point-9 {left: 31%;}
+
+.point-10 {right: 27%;}
+.point-10.point--two-numbers {right: 19%;}
+
+.point-11 {left: 50%;}
+
+.point-12 {left: 4%;}
+
+.point-sum--1-2-4,
+.point-sum--2-3-5 {top: 55%}
+
+.point-sum--1-2-4 {left: 36%}
+.point-sum--2-3-5 {right: 29%;}
+
+.point-sum--9-11-10,
+.point-sum--4-2-5,
+.point-sum--4-5-6 {left: 50%;}
+
+.point-sum--9-11-10 {top: 19%}
+.point-sum--4-2-5 {top: 60%;}
+.point-sum--4-5-6 {bottom: 19%;}
